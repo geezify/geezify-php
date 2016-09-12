@@ -223,7 +223,7 @@ class Geezify
     protected function shouldRemoveGeezSeparator($block, $separator)
     {
         return
-            empty($block) and
+            empty($block) &&
             $this->isGeezNumber100($separator);
     }
 
@@ -261,7 +261,7 @@ class Geezify
     protected function shouldRemoveGeezNumberBlock($block, $separator, $index)
     {
         return
-            $this->isOneHundred($block, $separator) or
+            $this->isOneHundred($block, $separator) ||
             $this->isLeadingTenThousand($block, $separator, $index);
     }
 
@@ -274,7 +274,7 @@ class Geezify
     protected function isOneHundred($block, $separator)
     {
         return
-            $this->isGeezNumber100($separator) and
+            $this->isGeezNumber100($separator) &&
             $this->isGeezNumberOne($block);
     }
 
@@ -298,8 +298,8 @@ class Geezify
     protected function isLeadingTenThousand($block, $separator, $index)
     {
         return
-            $this->isZero($index) and
-            $this->isGeezNumberOne($block) and
+            $this->isZero($index) &&
+            $this->isGeezNumberOne($block) &&
             $this->isGeezNumberTenThousand($separator);
     }
 
