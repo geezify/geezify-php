@@ -1,7 +1,7 @@
 build:
     environment:
         php:
-            version: 5.4.       # Common versions: 5.4, 5.5, 5.6, 7.0 or hhvm
+            version: 5.4
     tests:
         override:
             command: phpunit --coverage-clover=my-coverage-file
