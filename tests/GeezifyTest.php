@@ -118,7 +118,7 @@ class GeezifyTest extends \PHPUnit_Framework_TestCase
      *
      * @dataProvider geezNumberTestDataProvider
      */
-    public function testGeezConvert($number, $geez_number)
+    public function test_geez_convert($number, $geez_number)
     {
         $actual = $this->geezify->convert($number);
 
