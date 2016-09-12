@@ -245,10 +245,6 @@ class Geezify
      */
     protected function isGeezNumber($geez_number, $number)
     {
-        if (!isset(static::$GEEZ_NUMBERS[$number])) {
-            return false;
-        }
-
         return $geez_number === static::$GEEZ_NUMBERS[$number];
     }
 
