@@ -3,7 +3,7 @@ Andegna Geezify
 
 [![Build Status](https://travis-ci.org/andegna/geezify.svg?branch=master)](https://travis-ci.org/andegna/geezify)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/andegna/geezify/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/andegna/geezify/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/andegna/geezify/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/andegna/geezify/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/andegna/geezify/badges/coverage.png?b=develop)](https://scrutinizer-ci.com/g/andegna/geezify/?branch=develop)
 [![Total Downloads](https://poser.pugx.org/andegna/geezify/d/total.svg)](https://packagist.org/packages/andegna/geezify)
 [![Latest Stable Version](https://poser.pugx.org/andegna/geezify/v/stable.svg)](https://packagist.org/packages/andegna/geezify)
 [![Latest Unstable Version](https://poser.pugx.org/andegna/geezify/v/unstable.svg)](https://packagist.org/packages/andegna/geezify)
