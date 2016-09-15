@@ -4,17 +4,14 @@ namespace Andegna\Geez;
 
 use Andegna\Geez\Converter\AsciiConverter;
 use Andegna\Geez\Converter\GeezConverter;
-use Andegna\Geez\Exception\NotGeezArgumentException;
 
 /**
- * Geezify converts numbers in ASCII to Geez and vise versa
+ * Geezify converts numbers in ASCII to Geez and vise versa.
  *
- * @package Andegna\Geez
  * @author  Sam As End <4sam21{at}gmail.com>
  */
 class Geezify
 {
-
     /**
      * @var GeezConverter
      */
@@ -35,13 +32,12 @@ class Geezify
         GeezConverter $geez_converter,
         AsciiConverter $ascii_converter
     ) {
-    
         $this->geez_converter = $geez_converter;
         $this->ascii_converter = $ascii_converter;
     }
 
     /**
-     * Return a new Geezify instance
+     * Return a new Geezify instance.
      *
      * @return Geezify
      */
@@ -51,12 +47,13 @@ class Geezify
     }
 
     /**
-     * Converts ASCII number to geez
+     * Converts ASCII number to geez.
      *
      * @param $ascii_number
      *
-     * @return string
      * @throws \Andegna\Geez\Exception\NotAnIntegerArgumentException
+     *
+     * @return string
      */
     public function toGeez($ascii_number)
     {
@@ -64,12 +61,13 @@ class Geezify
     }
 
     /**
-     * Convert geez to ASCII
+     * Convert geez to ASCII.
      *
      * @param string $geez_number
      *
-     * @return int
      * @throws \Andegna\Geez\Exception\NotGeezArgumentException
+     *
+     * @return int
      */
     public function toAscii($geez_number)
     {

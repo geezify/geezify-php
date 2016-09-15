@@ -6,9 +6,8 @@ use Andegna\Geez\Converter\Converter;
 use SplQueue as Queue;
 
 /**
- * GeezCalculator calculate the ascii number from the parsed queue
+ * GeezCalculator calculate the ascii number from the parsed queue.
  *
- * @package Andegna\Geez\Helper
  * @author  Sam As End <4sam21{at}gmail.com>
  */
 class GeezCalculator
@@ -25,12 +24,12 @@ class GeezCalculator
     protected $queue;
 
     /**
-     * @var  integer
+     * @var int
      */
     protected $total;
 
     /**
-     * @var  integer
+     * @var int
      */
     protected $sub_total;
 
@@ -46,7 +45,7 @@ class GeezCalculator
     }
 
     /**
-     * Do the magic
+     * Do the magic.
      */
     public function calculator()
     {
@@ -58,7 +57,7 @@ class GeezCalculator
     }
 
     /**
-     * set the sub total attribute to zero
+     * set the sub total attribute to zero.
      */
     protected function resetSubTotalToZero()
     {
@@ -66,7 +65,7 @@ class GeezCalculator
     }
 
     /**
-     * Process a single token from the Queue
+     * Process a single token from the Queue.
      *
      * @param $token
      */
@@ -78,7 +77,7 @@ class GeezCalculator
     }
 
     /**
-     * Fetch the block and separator from the token
+     * Fetch the block and separator from the token.
      *
      * @param $token
      *
@@ -97,10 +96,9 @@ class GeezCalculator
     }
 
     /**
-     * Process based on separator
+     * Process based on separator.
      *
      * @param $block
-     *
      * @param $separator
      */
     protected function processBySeparator($block, $separator)
@@ -136,11 +134,11 @@ class GeezCalculator
 
     /**
      * Add the sub total and the block to total
-     * and reset sub total to zero
+     * and reset sub total to zero.
      *
      * @param $block
      *
-     * @return integer
+     * @return int
      */
     protected function addToTotal($block)
     {
@@ -153,7 +151,7 @@ class GeezCalculator
      *
      * @param $block
      *
-     * @return boolean
+     * @return bool
      */
     protected function isLeading($block)
     {
@@ -167,7 +165,7 @@ class GeezCalculator
      *
      * @param $block
      *
-     * @return boolean
+     * @return bool
      */
     protected function isBlockZero($block)
     {
@@ -179,7 +177,7 @@ class GeezCalculator
      *
      * @param $number
      *
-     * @return boolean
+     * @return bool
      */
     protected function isZero($number)
     {
@@ -189,7 +187,7 @@ class GeezCalculator
     /**
      * Is sub total attribute zero?
      *
-     * @return boolean
+     * @return bool
      */
     protected function isSubtotalZero()
     {
@@ -197,7 +195,7 @@ class GeezCalculator
     }
 
     /**
-     * Add number to sun total
+     * Add number to sun total.
      *
      * @param $number integer
      */
@@ -211,7 +209,7 @@ class GeezCalculator
      *
      * @param $block
      *
-     * @return boolean
+     * @return bool
      */
     protected function isLeadingTenThousand($block)
     {
@@ -223,7 +221,7 @@ class GeezCalculator
     /**
      * Is the total attribute zero?
      *
-     * @return boolean
+     * @return bool
      */
     protected function isTotalZero()
     {
@@ -231,7 +229,7 @@ class GeezCalculator
     }
 
     /**
-     * Multiply the total attribute by ten thousand
+     * Multiply the total attribute by ten thousand.
      */
     protected function multiplyTotalBy10k()
     {
@@ -239,9 +237,9 @@ class GeezCalculator
     }
 
     /**
-     * Return the calculated ascii number
+     * Return the calculated ascii number.
      *
-     * @return integer
+     * @return int
      */
     public function getCalculated()
     {

@@ -6,22 +6,21 @@ use Andegna\Geez\Exception\NotAnIntegerArgumentException;
 
 /**
  * GeezConverter converts ascii number like <b>1986</b>
- * to equivalent geez number like <b>፲፱፻፹፮</b>
+ * to equivalent geez number like <b>፲፱፻፹፮</b>.
  *
- * @package Andegna\Geez\Converter
  * @author  Sam As End <4sam21{at}gmail.com>
  */
 class GeezConverter extends Converter
 {
-
     /**
      * Convert an ascii number like <b>1, 21, 3456</b> to
-     * geez number <b>፩, ፳፩, ፴፬፻፶፮</b>
+     * geez number <b>፩, ፳፩, ፴፬፻፶፮</b>.
      *
-     * @param integer $ascii_number
+     * @param int $ascii_number
+     *
+     * @throws NotAnIntegerArgumentException if the number is not an integer
      *
      * @return string
-     * @throws NotAnIntegerArgumentException if the number is not an integer
      */
     public function convert($ascii_number)
     {
@@ -40,12 +39,13 @@ class GeezConverter extends Converter
      * - Validate the number
      * - Convert the number to a string
      * - Get the length of the number
-     * - Prepend a space if the length is odd
+     * - Prepend a space if the length is odd.
      *
      * @param $ascii_number
      *
-     * @return array the $number and the $length
      * @throws \Andegna\Geez\Exception\NotAnIntegerArgumentException
+     *
+     * @return array the $number and the $length
      */
     protected function prepareForConversion($ascii_number)
     {
@@ -65,16 +65,17 @@ class GeezConverter extends Converter
     }
 
     /**
-     * Validate if the number is ascii number
+     * Validate if the number is ascii number.
      *
      * @param $ascii_number
      *
-     * @return integer
      * @throws NotAnIntegerArgumentException
+     *
+     * @return int
      */
     protected function validateAsciiNumber($ascii_number)
     {
-        if (!is_integer($ascii_number)) {
+        if (!is_int($ascii_number)) {
             throw new NotAnIntegerArgumentException($ascii_number);
         }
 
@@ -82,7 +83,7 @@ class GeezConverter extends Converter
     }
 
     /**
-     * Prepend space if the length of the number is odd
+     * Prepend space if the length of the number is odd.
      *
      * @param $ascii_number
      * @param $length
@@ -103,7 +104,7 @@ class GeezConverter extends Converter
      *
      * @param $ascii_number
      *
-     * @return boolean
+     * @return bool
      */
     protected function isOdd($ascii_number)
     {
@@ -115,7 +116,7 @@ class GeezConverter extends Converter
      *
      * @param $number
      *
-     * @return boolean
+     * @return bool
      */
     protected function isEven($number)
     {
@@ -124,7 +125,7 @@ class GeezConverter extends Converter
     }
 
     /**
-     * Parse each two character block
+     * Parse each two character block.
      *
      * @param $number
      * @param $index
@@ -144,7 +145,7 @@ class GeezConverter extends Converter
     }
 
     /**
-     * Fetch the two character (00-99) block and convert it to geez
+     * Fetch the two character (00-99) block and convert it to geez.
      *
      * @param $number
      * @param $index
@@ -155,15 +156,15 @@ class GeezConverter extends Converter
     {
         $block = $this->getBlock($number, $index);
 
-        $tenth = (int)$block[0];
-        $once = (int)$block[1];
+        $tenth = (int) $block[0];
+        $once = (int) $block[1];
 
         return
-            static::$GEEZ_NUMBERS[($tenth * 10)] . static::$GEEZ_NUMBERS[$once];
+            static::$GEEZ_NUMBERS[($tenth * 10)].static::$GEEZ_NUMBERS[$once];
     }
 
     /**
-     * Fetch two characters from the $number starting from $index
+     * Fetch two characters from the $number starting from $index.
      *
      * @param $number string the whole ascii number
      * @param $index  integer the starting position
@@ -176,12 +177,12 @@ class GeezConverter extends Converter
     }
 
     /**
-     * The ቤት of the block
+     * The ቤት of the block.
      *
      * @param $length integer the length of the ascii number
      * @param $index  integer the character index
      *
-     * @return integer
+     * @return int
      */
     protected function getBet($length, $index)
     {
@@ -193,7 +194,7 @@ class GeezConverter extends Converter
     }
 
     /**
-     * Get the separator depending on the bet
+     * Get the separator depending on the bet.
      *
      * @param $bet
      *
@@ -211,11 +212,11 @@ class GeezConverter extends Converter
     }
 
     /**
-     * Combines the block and the separator
+     * Combines the block and the separator.
      *
-     * @param string  $geez_number
-     * @param string  $separator
-     * @param integer $index of the block
+     * @param string $geez_number
+     * @param string $separator
+     * @param int    $index       of the block
      *
      * @return string
      */
@@ -224,7 +225,6 @@ class GeezConverter extends Converter
         $separator,
         $index
     ) {
-    
         if ($this->shouldRemoveGeezSeparator($geez_number, $separator)) {
             $separator = static::EMPTY_CHARACTER;
         }
@@ -233,16 +233,16 @@ class GeezConverter extends Converter
             $geez_number = static::EMPTY_CHARACTER;
         }
 
-        return $geez_number . $separator;
+        return $geez_number.$separator;
     }
 
     /**
-     * Returns true if the block is empty and the separator is 100
+     * Returns true if the block is empty and the separator is 100.
      *
      * @param string $block
      * @param string $separator
      *
-     * @return boolean
+     * @return bool
      */
     protected function shouldRemoveGeezSeparator($block, $separator)
     {
@@ -253,13 +253,13 @@ class GeezConverter extends Converter
 
     /**
      * Returns true if the ascii number is 100 or
-     * if the ascii number is the leading 10000
+     * if the ascii number is the leading 10000.
      *
      * @param  $block
      * @param  $separator
      * @param  $index
      *
-     * @return boolean
+     * @return bool
      */
     protected function shouldRemoveGeezNumberBlock($block, $separator, $index)
     {
@@ -269,12 +269,12 @@ class GeezConverter extends Converter
     }
 
     /**
-     * Returns true if the number is 100
+     * Returns true if the number is 100.
      *
      * @param $block
      * @param $separator
      *
-     * @return boolean
+     * @return bool
      */
     protected function isOneHundred($block, $separator)
     {
@@ -284,13 +284,13 @@ class GeezConverter extends Converter
     }
 
     /**
-     * Returns true if the number is the leading 10000
+     * Returns true if the number is the leading 10000.
      *
      * @param $block
      * @param $separator
      * @param $index
      *
-     * @return boolean
+     * @return bool
      */
     protected function isLeadingTenThousand($block, $separator, $index)
     {
