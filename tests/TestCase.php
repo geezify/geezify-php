@@ -2,19 +2,8 @@
 
 namespace Andegna\Geez\PHPUnit;
 
-use Andegna\Geez\Geezify;
-use Exception;
-
-class GeezifyTest extends \PHPUnit_Framework_TestCase
+class TestCase extends \PHPUnit\Framework\TestCase
 {
-    /** @var Geezify */
-    protected $geezify;
-
-    protected function setUp()
-    {
-        parent::setUp();
-        $this->geezify = new Geezify();
-    }
 
     public function geezNumberTestDataProvider()
     {
@@ -112,55 +101,19 @@ class GeezifyTest extends \PHPUnit_Framework_TestCase
         ];
     }
 
-    /**
-     * @param $number
-     * @param $geez_number
-     *
-     * @dataProvider geezNumberTestDataProvider
-     */
-    public function test_geez_convert($number, $geez_number)
-    {
-        $actual = $this->geezify->convert($number);
-
-        $this->assertEquals($geez_number, $actual);
-    }
-
-    /**
-     * @param $number
-     * @param $ignore
-     *
-     * @dataProvider geezNumberTestDataProvider
-     */
-    public function test_accept_all_integers($number, $ignore)
-    {
-        try {
-            $this->geezify->convert($number);
-        } catch (Exception $e) {
-            $this->fail($e);
-        }
-    }
-
     public function invalidNumberDataProvider()
     {
         return [
             [11.11],
+            [2e3],
             ['11.11'],
             ['lorem ipsum'],
             [false],
             [array()],
             [new \stdClass()],
-        ];
-    }
+            ['፲፯ lorem ፷፭ ipsum ፳፩'],
 
-    /**
-     * @param $number
-     *
-     * @dataProvider invalidNumberDataProvider
-     * @expectedException \Andegna\Geez\NotAnIntegerArgumentException
-     */
-    public function test_invalid_number_throw_exception($number)
-    {
-        $this->geezify->convert($number);
+        ];
     }
 
 }

@@ -25,14 +25,26 @@ composer require andegna/geezify
 A simple example
 ----------------
 ```php
+<?php
+
 require 'vendor/autoload.php';
 
-$geez = new Andegna\Geez\Geezify();
+use Andegna\Geez\Geezify;
 
-echo $geez->convert(123) . PHP_EOL; // ፻፳፫
-echo $geez->convert(1234) . PHP_EOL; // ፲፪፻፴፬
-echo $geez->convert(1986) . PHP_EOL; // ፲፱፻፹፮
-echo $geez->convert(1000000) . PHP_EOL; // ፻፼
+$geez = Geezify::create();
+
+echo $geez->toGeez(123) . PHP_EOL; // ፻፳፫
+echo $geez->toGeez(1234) . PHP_EOL; // ፲፪፻፴፬
+echo $geez->toGeez(1986) . PHP_EOL; // ፲፱፻፹፮
+echo $geez->toGeez(1000000) . PHP_EOL; // ፻፼
+
+// or you can even
+
+echo $geez->toAscii('፻፳፫') . PHP_EOL; // 123
+echo $geez->toAscii('፲፪፻፴፬') . PHP_EOL; // 1234
+echo $geez->toAscii('፲፱፻፹፮') . PHP_EOL; // 1986
+echo $geez->toAscii('፻፼') . PHP_EOL; // 1000000
+
 ```
 
 License
