@@ -2,31 +2,39 @@
 
 namespace Andegna\Geez\Converter;
 
+use Andegna\Geez\Exception\NotGeezArgumentException;
 use Andegna\Geez\Helper\GeezCalculator;
 use Andegna\Geez\Helper\GeezParser;
 use SplQueue as Queue;
 
 /**
- * Class AsciiConverter
+ * AsciiConverter converts geez number like <b>፲፱፻፹፮</b>
+ * to equivalent ascii number like <b>1986</b>
  *
  * @package Andegna\Geez\Converter
+ * @author  Sam As End <4sam21{at}gmail.com>
  */
 class AsciiConverter extends Converter
 {
 
     /**
-     * @param $_number
+     * Accepts geez number and return an integer
      *
-     * @return integer
+     * @param $geez_number string to be converted
+     *
+     * @return integer the ascii representation
+     * @throws NotGeezArgumentException if the valid geez number
      */
-    public function convert($_number)
+    public function convert($geez_number)
     {
-        $parsed = $this->parse($_number);
+        $parsed = $this->parse($geez_number);
 
         return $this->calculate($parsed);
     }
 
     /**
+     * Parse the geez number number to a queue
+     *
      * @param $geez_number
      *
      * @return Queue
@@ -40,6 +48,8 @@ class AsciiConverter extends Converter
     }
 
     /**
+     * Calculate the ascii from the parsed queue
+     *
      * @param Queue $parsed
      *
      * @return integer
@@ -51,5 +61,4 @@ class AsciiConverter extends Converter
 
         return $calculator->getCalculated();
     }
-
 }

@@ -2,41 +2,68 @@
 
 namespace Andegna\Geez\Converter;
 
+/**
+ * Converter class provide the base functionality
+ * for the Ascii and Geez converters
+ *
+ * @package Andegna\Geez\Converter
+ * @author  Sam As End <4sam21{at}gmail.com>
+ */
 abstract class Converter
 {
+    // i don't want readers to think it's a white
+    // space, it's just an empty string
     const EMPTY_CHARACTER = '';
 
+    // PHP never thought of declaring (const | define) arrays till 5.6
+    // This is the second best thing for 5.4
     public static $GEEZ_NUMBERS = [
-        0 => '', '፩', '፪', '፫', '፬', '፭', '፮', '፯', '፰', '፱', '፲',
-        20 => '፳',
-        30 => '፴',
-        40 => '፵',
-        50 => '፶',
-        60 => '፷',
-        70 => '፸',
-        80 => '፹',
-        90 => '፺',
-        100 => '፻',
+        0     => '', '፩', '፪', '፫', '፬', '፭', '፮', '፯', '፰', '፱', '፲',
+        20    => '፳',
+        30    => '፴',
+        40    => '፵',
+        50    => '፶',
+        60    => '፷',
+        70    => '፸',
+        80    => '፹',
+        90    => '፺',
+        100   => '፻',
         10000 => '፼',
     ];
 
-    public abstract function convert($_number);
+    /**
+     * Check if a number is strictly ZERO
+     *
+     * @param integer $number
+     *
+     * @return bool if true it's zero
+     */
+    public static function isZero($number)
+    {
+        return $number === 0;
+    }
+
+    abstract public function convert($number);
 
     /**
-     * @param string $separator
+     * Checks if the number is ፻
      *
-     * @return bool
+     * @param string $geez_number
+     *
+     * @return boolean
      */
-    protected function isGeezNumberHundred($separator)
+    protected function isGeezNumberHundred($geez_number)
     {
-        return $this->isGeezNumber($separator, 100);
+        return $this->isGeezNumber($geez_number, 100);
     }
 
     /**
-     * @param string $geez_number
-     * @param int    $number
+     * Checks if the geez number character is equal to ascii number
      *
-     * @return bool
+     * @param string  $geez_number
+     * @param integer $number
+     *
+     * @return boolean
      */
     protected function isGeezNumber($geez_number, $number)
     {
@@ -44,33 +71,26 @@ abstract class Converter
     }
 
     /**
-     * @param $geez
+     * Checks if the number is ፩
      *
-     * @return bool
+     * @param $geez_number
+     *
+     * @return boolean
      */
-    protected function isGeezNumberOne($geez)
+    protected function isGeezNumberOne($geez_number)
     {
-        return $this->isGeezNumber($geez, 1);
+        return $this->isGeezNumber($geez_number, 1);
     }
 
     /**
-     * @param $geez
+     * Checks if the number is ፼
      *
-     * @return bool
-     */
-    protected function isGeezNumberTenThousand($geez)
-    {
-        return $this->isGeezNumber($geez, 10000);
-    }
-
-    /**
-     * @param int $index
+     * @param $geez_number
      *
-     * @return bool
+     * @return boolean
      */
-    public static function isZero($index)
+    protected function isGeezNumberTenThousand($geez_number)
     {
-        return $index === 0;
+        return $this->isGeezNumber($geez_number, 10000);
     }
-
 }

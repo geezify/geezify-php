@@ -109,11 +109,10 @@ class TestCase extends \PHPUnit\Framework\TestCase
             ['11.11'],
             ['lorem ipsum'],
             [false],
-            [array()],
+            [[]],
             [new \stdClass()],
             ['፲፯ lorem ፷፭ ipsum ፳፩'],
 
         ];
     }
-
 }

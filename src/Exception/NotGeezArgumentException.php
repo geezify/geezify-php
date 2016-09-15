@@ -4,6 +4,12 @@ namespace Andegna\Geez\Exception;
 
 use InvalidArgumentException;
 
+/**
+ * Class NotGeezArgumentException
+ *
+ * @package Andegna\Geez\Exception
+ * @author  Sam As End <4sam21{at}gmail.com>
+ */
 class NotGeezArgumentException extends InvalidArgumentException
 {
 
@@ -13,5 +19,4 @@ class NotGeezArgumentException extends InvalidArgumentException
             "Not a geez number!, {$argument} given."
         );
     }
-
 }

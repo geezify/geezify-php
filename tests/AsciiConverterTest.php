@@ -6,6 +6,7 @@ use Andegna\Geez\Converter\AsciiConverter;
 
 class AsciiConverterTest extends TestCase
 {
+
     /** @var AsciiConverter */
     protected $converter;
 
@@ -13,6 +14,7 @@ class AsciiConverterTest extends TestCase
      * @param $ascii
      * @param $geez
      *
+     * @throws \Andegna\Geez\Exception\NotGeezArgumentException
      * @dataProvider geezNumberTestDataProvider
      */
     public function test_ascii_converter($ascii, $geez)
@@ -25,6 +27,7 @@ class AsciiConverterTest extends TestCase
     /**
      * @param $value
      *
+     * @throws \Andegna\Geez\Exception\NotGeezArgumentException
      * @dataProvider invalidNumberDataProvider
      * @expectedException Andegna\Geez\Exception\NotGeezArgumentException
      */
@@ -38,5 +41,4 @@ class AsciiConverterTest extends TestCase
         parent::setUp();
         $this->converter = new AsciiConverter();
     }
-    
 }

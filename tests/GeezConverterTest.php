@@ -6,13 +6,17 @@ use Andegna\Geez\Converter\GeezConverter;
 
 class GeezConverterTest extends TestCase
 {
-    /** @var GeezConverter */
+
+    /**
+     * @var GeezConverter
+     */
     protected $converter;
 
     /**
      * @param $number
      * @param $geez_number
      *
+     * @throws \Andegna\Geez\Exception\NotAnIntegerArgumentException
      * @dataProvider geezNumberTestDataProvider
      */
     public function test_geez_converter($number, $geez_number)
@@ -25,6 +29,7 @@ class GeezConverterTest extends TestCase
     /**
      * @param $number
      *
+     * @throws \Andegna\Geez\Exception\NotAnIntegerArgumentException
      * @dataProvider invalidNumberDataProvider
      * @expectedException \Andegna\Geez\Exception\NotAnIntegerArgumentException
      */
@@ -38,5 +43,4 @@ class GeezConverterTest extends TestCase
         parent::setUp();
         $this->converter = new GeezConverter();
     }
-
 }
