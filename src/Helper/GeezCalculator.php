@@ -103,13 +103,13 @@ class GeezCalculator
      */
     protected function processBySeparator($block, $separator)
     {
-	    if ($separator == self::ONE) {
-		    $this->addToTotal($block);
-	    } elseif ($separator == self::HUNDRED) {
-		    $this->updateSubTotal($block);
-	    } elseif ($separator == self::TEN_THOUSAND) {
-		    $this->updateTotal($block);
-	    }
+        if ($separator == self::ONE) {
+            $this->addToTotal($block);
+        } elseif ($separator == self::HUNDRED) {
+            $this->updateSubTotal($block);
+        } elseif ($separator == self::TEN_THOUSAND) {
+            $this->updateTotal($block);
+        }
     }
 
     /**
@@ -226,33 +226,34 @@ class GeezCalculator
         return $this->total;
     }
 
-	/**
-	 * Update the sub total attribute
-	 *
-	 * @param $block
-	 */
-	protected function updateSubTotal($block)
-	{
-		if ($this->isLeading($block)) {
-			$block = self::ONE;
-		}
+    /**
+     * Update the sub total attribute.
+     *
+     * @param $block
+     */
+    protected function updateSubTotal($block)
+    {
+        if ($this->isLeading($block)) {
+            $block = self::ONE;
+        }
 
-		$block *= self::HUNDRED;
+        $block *= self::HUNDRED;
 
-		$this->addToSubTotal($block);
-	}
+        $this->addToSubTotal($block);
+    }
 
-	/**
-	 * Update the sub total attribute
-	 * @param $block
-	 */
-	protected function updateTotal($block)
-	{
-		if ($this->isLeadingTenThousand($block)) {
-			$block = self::ONE;
-		}
+    /**
+     * Update the sub total attribute.
+     *
+     * @param $block
+     */
+    protected function updateTotal($block)
+    {
+        if ($this->isLeadingTenThousand($block)) {
+            $block = self::ONE;
+        }
 
-		$this->addToTotal($block);
-		$this->multiplyTotalBy10k();
-	}
+        $this->addToTotal($block);
+        $this->multiplyTotalBy10k();
+    }
 }
