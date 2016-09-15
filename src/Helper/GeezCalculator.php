@@ -103,33 +103,13 @@ class GeezCalculator
      */
     protected function processBySeparator($block, $separator)
     {
-        switch ($separator) {
-            case self::ONE:
-                $this->addToTotal($block);
-
-                return;
-
-            case self::HUNDRED:
-                if ($this->isLeading($block)) {
-                    $block = self::ONE;
-                }
-
-                $block *= self::HUNDRED;
-
-                $this->addToSubTotal($block);
-
-                return;
-
-            case self::TEN_THOUSAND:
-                if ($this->isLeadingTenThousand($block)) {
-                    $block = self::ONE;
-                }
-
-                $this->addToTotal($block);
-                $this->multiplyTotalBy10k();
-
-                return;
-        }
+	    if ($separator == self::ONE) {
+		    $this->addToTotal($block);
+	    } elseif ($separator == self::HUNDRED) {
+		    $this->updateSubTotal($block);
+	    } elseif ($separator == self::TEN_THOUSAND) {
+		    $this->updateTotal($block);
+	    }
     }
 
     /**
@@ -245,4 +225,34 @@ class GeezCalculator
     {
         return $this->total;
     }
+
+	/**
+	 * Update the sub total attribute
+	 *
+	 * @param $block
+	 */
+	protected function updateSubTotal($block)
+	{
+		if ($this->isLeading($block)) {
+			$block = self::ONE;
+		}
+
+		$block *= self::HUNDRED;
+
+		$this->addToSubTotal($block);
+	}
+
+	/**
+	 * Update the sub total attribute
+	 * @param $block
+	 */
+	protected function updateTotal($block)
+	{
+		if ($this->isLeadingTenThousand($block)) {
+			$block = self::ONE;
+		}
+
+		$this->addToTotal($block);
+		$this->multiplyTotalBy10k();
+	}
 }
