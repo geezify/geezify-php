@@ -6,7 +6,6 @@ use Andegna\Geez\Converter\AsciiConverter;
 
 class AsciiConverterTest extends TestCase
 {
-
     /** @var AsciiConverter */
     protected $converter;
 

@@ -4,7 +4,6 @@ namespace Andegna\Geez\PHPUnit;
 
 class TestCase extends \PHPUnit_Framework_TestCase
 {
-
     public function geezNumberTestDataProvider()
     {
         return [
