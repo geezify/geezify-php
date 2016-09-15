@@ -5,14 +5,12 @@ namespace Andegna\Geez\Exception;
 use InvalidArgumentException;
 
 /**
- * Class NotAnIntegerArgumentException
+ * Class NotAnIntegerArgumentException.
  *
- * @package Andegna\Geez\Exception
  * @author  Sam As End <4sam21{at}gmail.com>
  */
 class NotAnIntegerArgumentException extends InvalidArgumentException
 {
-
     public function __construct($argument)
     {
         parent::__construct(

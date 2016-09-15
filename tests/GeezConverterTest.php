@@ -6,7 +6,6 @@ use Andegna\Geez\Converter\GeezConverter;
 
 class GeezConverterTest extends TestCase
 {
-
     /**
      * @var GeezConverter
      */

@@ -4,9 +4,8 @@ namespace Andegna\Geez\Converter;
 
 /**
  * Converter class provide the base functionality
- * for the Ascii and Geez converters
+ * for the Ascii and Geez converters.
  *
- * @package Andegna\Geez\Converter
  * @author  Sam As End <4sam21{at}gmail.com>
  */
 abstract class Converter
@@ -32,9 +31,9 @@ abstract class Converter
     ];
 
     /**
-     * Check if a number is strictly ZERO
+     * Check if a number is strictly ZERO.
      *
-     * @param integer $number
+     * @param int $number
      *
      * @return bool if true it's zero
      */
@@ -46,11 +45,11 @@ abstract class Converter
     abstract public function convert($number);
 
     /**
-     * Checks if the number is ፻
+     * Checks if the number is ፻.
      *
      * @param string $geez_number
      *
-     * @return boolean
+     * @return bool
      */
     protected function isGeezNumberHundred($geez_number)
     {
@@ -58,12 +57,12 @@ abstract class Converter
     }
 
     /**
-     * Checks if the geez number character is equal to ascii number
+     * Checks if the geez number character is equal to ascii number.
      *
-     * @param string  $geez_number
-     * @param integer $number
+     * @param string $geez_number
+     * @param int    $number
      *
-     * @return boolean
+     * @return bool
      */
     protected function isGeezNumber($geez_number, $number)
     {
@@ -71,11 +70,11 @@ abstract class Converter
     }
 
     /**
-     * Checks if the number is ፩
+     * Checks if the number is ፩.
      *
      * @param $geez_number
      *
-     * @return boolean
+     * @return bool
      */
     protected function isGeezNumberOne($geez_number)
     {
@@ -87,7 +86,7 @@ abstract class Converter
      *
      * @param $geez_number
      *
-     * @return boolean
+     * @return bool
      */
     protected function isGeezNumberTenThousand($geez_number)
     {

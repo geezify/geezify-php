@@ -9,21 +9,20 @@ use SplQueue as Queue;
 
 /**
  * AsciiConverter converts geez number like <b>፲፱፻፹፮</b>
- * to equivalent ascii number like <b>1986</b>
+ * to equivalent ascii number like <b>1986</b>.
  *
- * @package Andegna\Geez\Converter
  * @author  Sam As End <4sam21{at}gmail.com>
  */
 class AsciiConverter extends Converter
 {
-
     /**
-     * Accepts geez number and return an integer
+     * Accepts geez number and return an integer.
      *
      * @param $geez_number string to be converted
      *
-     * @return integer the ascii representation
      * @throws NotGeezArgumentException if the valid geez number
+     *
+     * @return int the ascii representation
      */
     public function convert($geez_number)
     {
@@ -33,7 +32,7 @@ class AsciiConverter extends Converter
     }
 
     /**
-     * Parse the geez number number to a queue
+     * Parse the geez number number to a queue.
      *
      * @param $geez_number
      *
@@ -48,11 +47,11 @@ class AsciiConverter extends Converter
     }
 
     /**
-     * Calculate the ascii from the parsed queue
+     * Calculate the ascii from the parsed queue.
      *
      * @param Queue $parsed
      *
-     * @return integer
+     * @return int
      */
     protected function calculate(Queue $parsed)
     {

@@ -7,15 +7,12 @@ use Andegna\Geez\Exception\NotGeezArgumentException;
 use SplQueue as Queue;
 
 /**
- * GeezParser parse the geez number to a queue
- *
- * @package Andegna\Geez\Helper
+ * GeezParser parse the geez number to a queue.
  */
 class GeezParser
 {
-
     /**
-     * @var  string
+     * @var string
      */
     protected $geez_number;
 
@@ -57,7 +54,7 @@ class GeezParser
     }
 
     /**
-     * Swing the magic wand and say the spell
+     * Swing the magic wand and say the spell.
      */
     public function parse()
     {
@@ -75,11 +72,11 @@ class GeezParser
     }
 
     /**
-     * Get the length of the string
+     * Get the length of the string.
      *
      * @param  $geez_number
      *
-     * @return integer
+     * @return int
      */
     protected function getLength($geez_number)
     {
@@ -87,7 +84,7 @@ class GeezParser
     }
 
     /**
-     * Parse a geez character
+     * Parse a geez character.
      *
      * @param $index integer
      * @param $block integer
@@ -107,12 +104,13 @@ class GeezParser
     }
 
     /**
-     * Get the ascii number from geez number string
+     * Get the ascii number from geez number string.
      *
      * @param $index
      *
-     * @return int
      * @throws \Andegna\Geez\Exception\NotGeezArgumentException
+     *
+     * @return int
      */
     protected function parseGeezAtIndex($index)
     {
@@ -122,7 +120,7 @@ class GeezParser
     }
 
     /**
-     * Fetch z character at $index from the geez number string
+     * Fetch z character at $index from the geez number string.
      *
      * @param $geez_number
      * @param $index
@@ -135,12 +133,13 @@ class GeezParser
     }
 
     /**
-     * Convert geez number character to ascii
+     * Convert geez number character to ascii.
      *
      * @param $geez_number
      *
-     * @return integer
      * @throws NotGeezArgumentException
+     *
+     * @return int
      */
     protected function getAsciiNumber($geez_number)
     {
@@ -156,7 +155,7 @@ class GeezParser
     /**
      * @param $ascii_number
      *
-     * @return boolean
+     * @return bool
      */
     protected function isNotGeezSeparator($ascii_number)
     {
@@ -164,7 +163,7 @@ class GeezParser
     }
 
     /**
-     * Push to the queue
+     * Push to the queue.
      *
      * @param $block
      * @param $separator

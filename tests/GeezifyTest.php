@@ -6,7 +6,6 @@ use Andegna\Geez\Geezify;
 
 class GeezifyTest extends TestCase
 {
-
     public function test_random_numbers()
     {
         $geezify = Geezify::create();
