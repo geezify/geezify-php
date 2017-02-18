@@ -10,6 +10,8 @@ Andegna Geezify
 [![Latest Unstable Version](https://poser.pugx.org/andegna/geezify/v/unstable.svg)](https://packagist.org/packages/andegna/geezify)
 [![License](https://poser.pugx.org/andegna/geezify/license.svg)](https://packagist.org/packages/andegna/geezify)
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/a3519698-fee9-494c-adbb-c5c2f8abc422/big.png)](https://insight.sensiolabs.com/projects/a3519698-fee9-494c-adbb-c5c2f8abc422)
+
 This package is a simple library to convert ascii number '**3456**' to geez number '**፴፬፻፶፮**'.
 
 Installation
