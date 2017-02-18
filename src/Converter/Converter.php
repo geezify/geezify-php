@@ -6,7 +6,7 @@ namespace Andegna\Geez\Converter;
  * Converter class provide the base functionality
  * for the Ascii and Geez converters.
  *
- * @author  Sam As End <4sam21{at}gmail.com>
+ * @author Sam As End <4sam21{at}gmail.com>
  */
 abstract class Converter
 {

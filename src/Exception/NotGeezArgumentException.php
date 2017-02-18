@@ -7,7 +7,7 @@ use InvalidArgumentException;
 /**
  * Class NotGeezArgumentException.
  *
- * @author  Sam As End <4sam21{at}gmail.com>
+ * @author Sam As End <4sam21{at}gmail.com>
  */
 class NotGeezArgumentException extends InvalidArgumentException
 {

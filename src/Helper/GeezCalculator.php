@@ -8,7 +8,7 @@ use SplQueue as Queue;
 /**
  * GeezCalculator calculate the ascii number from the parsed queue.
  *
- * @author  Sam As End <4sam21{at}gmail.com>
+ * @author Sam As End <4sam21{at}gmail.com>
  */
 class GeezCalculator
 {

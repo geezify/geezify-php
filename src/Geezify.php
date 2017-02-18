@@ -8,7 +8,7 @@ use Andegna\Geez\Converter\GeezConverter;
 /**
  * Geezify converts numbers in ASCII to Geez and vise versa.
  *
- * @author  Sam As End <4sam21{at}gmail.com>
+ * @author Sam As End <4sam21{at}gmail.com>
  */
 class Geezify
 {

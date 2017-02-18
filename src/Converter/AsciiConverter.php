@@ -11,7 +11,7 @@ use SplQueue as Queue;
  * AsciiConverter converts geez number like <b>፲፱፻፹፮</b>
  * to equivalent ascii number like <b>1986</b>.
  *
- * @author  Sam As End <4sam21{at}gmail.com>
+ * @author Sam As End <4sam21{at}gmail.com>
  */
 class AsciiConverter extends Converter
 {

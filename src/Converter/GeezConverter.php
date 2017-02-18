@@ -8,7 +8,7 @@ use Andegna\Geez\Exception\NotAnIntegerArgumentException;
  * GeezConverter converts ascii number like <b>1986</b>
  * to equivalent geez number like <b>፲፱፻፹፮</b>.
  *
- * @author  Sam As End <4sam21{at}gmail.com>
+ * @author Sam As End <4sam21{at}gmail.com>
  */
 class GeezConverter extends Converter
 {
@@ -120,7 +120,6 @@ class GeezConverter extends Converter
      */
     protected function isEven($number)
     {
-        // TODO: is "$number & 1 === 0" more efficient?
         return ($number % 2) === 0;
     }
 
@@ -255,9 +254,9 @@ class GeezConverter extends Converter
      * Returns true if the ascii number is 100 or
      * if the ascii number is the leading 10000.
      *
-     * @param  $block
-     * @param  $separator
-     * @param  $index
+     * @param $block
+     * @param $separator
+     * @param $index
      *
      * @return bool
      */
