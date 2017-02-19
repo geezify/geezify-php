@@ -56,7 +56,7 @@ class AsciiConverter extends Converter
     protected function calculate(Queue $parsed)
     {
         $calculator = new GeezCalculator($parsed);
-        $calculator->calculator();
+        $calculator->calculate();
 
         return $calculator->getCalculated();
     }
