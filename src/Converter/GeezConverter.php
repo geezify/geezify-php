@@ -155,11 +155,11 @@ class GeezConverter extends Converter
     {
         $block = $this->getBlock($number, $index);
 
-        $tenth = (int) $block[0];
-        $once = (int) $block[1];
+        $tenth = (int)$block[0];
+        $once = (int)$block[1];
 
         return
-            static::$GEEZ_NUMBERS[($tenth * 10)].static::$GEEZ_NUMBERS[$once];
+            static::$GEEZ_NUMBERS[($tenth * 10)] . static::$GEEZ_NUMBERS[$once];
     }
 
     /**
@@ -232,7 +232,7 @@ class GeezConverter extends Converter
             $geez_number = static::EMPTY_CHARACTER;
         }
 
-        return $geez_number.$separator;
+        return $geez_number . $separator;
     }
 
     /**
