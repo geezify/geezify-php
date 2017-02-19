@@ -159,7 +159,7 @@ class GeezConverter extends Converter
         $once = (int) $block[1];
 
         return
-            static::$GEEZ_NUMBERS[($tenth * 10)].static::$GEEZ_NUMBERS[$once];
+            static::GEEZ_NUMBERS[($tenth * 10)].static::GEEZ_NUMBERS[$once];
     }
 
     /**
@@ -204,9 +204,9 @@ class GeezConverter extends Converter
         if ($this->isZero($bet)) {
             return static::EMPTY_CHARACTER;
         } elseif ($this->isOdd($bet)) {
-            return static::$GEEZ_NUMBERS[100];
+            return static::GEEZ_NUMBERS[100];
         } else {
-            return static::$GEEZ_NUMBERS[10000];
+            return static::GEEZ_NUMBERS[10000];
         }
     }
 

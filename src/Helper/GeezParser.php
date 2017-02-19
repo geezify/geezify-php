@@ -143,7 +143,7 @@ class GeezParser
      */
     protected function getAsciiNumber($geez_number)
     {
-        $ascii_number = array_search($geez_number, Converter::$GEEZ_NUMBERS, true);
+        $ascii_number = array_search($geez_number, Converter::GEEZ_NUMBERS, true);
 
         if ($ascii_number === false) {
             throw new NotGeezArgumentException($geez_number);

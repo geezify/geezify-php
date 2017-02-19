@@ -14,9 +14,7 @@ abstract class Converter
     // space, it's just an empty string
     const EMPTY_CHARACTER = '';
 
-    // PHP never thought of declaring (const | define) arrays till 5.6
-    // This is the second best thing for 5.4
-    public static $GEEZ_NUMBERS = [
+    const GEEZ_NUMBERS = [
         0     => '', '፩', '፪', '፫', '፬', '፭', '፮', '፯', '፰', '፱', '፲',
         20    => '፳',
         30    => '፴',
@@ -66,7 +64,7 @@ abstract class Converter
      */
     protected function isGeezNumber($geez_number, $number)
     {
-        return $geez_number === self::$GEEZ_NUMBERS[$number];
+        return $geez_number === self::GEEZ_NUMBERS[$number];
     }
 
     /**

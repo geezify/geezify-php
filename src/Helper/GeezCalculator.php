@@ -47,7 +47,7 @@ class GeezCalculator
     /**
      * Do the magic.
      */
-    public function calculator()
+    public function calculate()
     {
         $this->resetSubTotalToZero();
 
@@ -118,7 +118,7 @@ class GeezCalculator
      *
      * @param $block
      *
-     * @return int
+     * @return void
      */
     protected function addToTotal($block)
     {
