@@ -118,7 +118,7 @@ class GeezCalculator
      *
      * @param $block
      *
-     * @return int
+     * @return void
      */
     protected function addToTotal($block)
     {
