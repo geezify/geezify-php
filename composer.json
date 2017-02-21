@@ -1,6 +1,7 @@
 {
 	"name": "andegna/geezify",
-	"description": "Simple library to convert ascii number '3456' to geez number '፴፬፻፶፮'.",
+	"description": "A library to convert ascii number like '3456' to geez number '፴፬፻፶፮' and vise versa.",
+	"keywords": [ "ethiopian", "geez-number", "geez"],
 	"minimum-stability": "stable",
 	"license": "MIT",
 	"authors": [
