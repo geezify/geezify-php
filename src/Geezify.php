@@ -1,9 +1,9 @@
 <?php
 
-namespace Andegna\Geez;
+namespace Geezify;
 
-use Andegna\Geez\Converter\AsciiConverter;
-use Andegna\Geez\Converter\GeezConverter;
+use Geezify\Converter\AsciiConverter;
+use Geezify\Converter\GeezConverter;
 
 /**
  * Geezify converts numbers in ASCII to Geez and vise versa.
@@ -51,7 +51,7 @@ class Geezify
      *
      * @param $ascii_number
      *
-     * @throws \Andegna\Geez\Exception\NotAnIntegerArgumentException
+     * @throws \Geezify\Exception\NotAnIntegerArgumentException
      *
      * @return string
      */
@@ -65,7 +65,7 @@ class Geezify
      *
      * @param string $geez_number
      *
-     * @throws \Andegna\Geez\Exception\NotGeezArgumentException
+     * @throws \Geezify\Exception\NotGeezArgumentException
      *
      * @return int
      */

@@ -1,6 +1,6 @@
 <?php
 
-namespace Andegna\Geez\Exception;
+namespace Geezify\Exception;
 
 use InvalidArgumentException;
 

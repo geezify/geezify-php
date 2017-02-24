@@ -2,15 +2,9 @@
 <phpunit bootstrap="vendor/autoload.php"
          convertWarningsToExceptions="true">
     <testsuites>
-        <testsuite name="Andegna Geezify Test Suite">
+        <testsuite name="Geezify Test Suite">
             <directory suffix="Test.php">tests</directory>
         </testsuite>
     </testsuites>
-
-    <filter>
-        <whitelist>
-            <directory suffix=".php">./src</directory>
-        </whitelist>
-    </filter>
 
 </phpunit>

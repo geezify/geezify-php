@@ -1,10 +1,10 @@
 <?php
 
-namespace Andegna\Geez\PHPUnit;
+namespace Geezify\PHPUnit;
 
-use Andegna\Geez\Converter\AsciiConverter;
-use Andegna\Geez\Converter\GeezConverter;
-use Andegna\Geez\Geezify;
+use Geezify\Converter\AsciiConverter;
+use Geezify\Converter\GeezConverter;
+use Geezify\Geezify;
 use Prophecy\Prophet;
 
 class GeezifyTest extends TestCase

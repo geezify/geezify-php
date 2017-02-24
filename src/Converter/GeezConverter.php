@@ -1,8 +1,8 @@
 <?php
 
-namespace Andegna\Geez\Converter;
+namespace Geezify\Converter;
 
-use Andegna\Geez\Exception\NotAnIntegerArgumentException;
+use Geezify\Exception\NotAnIntegerArgumentException;
 
 /**
  * GeezConverter converts ascii number like <b>1986</b>
@@ -43,7 +43,7 @@ class GeezConverter extends Converter
      *
      * @param $ascii_number
      *
-     * @throws \Andegna\Geez\Exception\NotAnIntegerArgumentException
+     * @throws \Geezify\Exception\NotAnIntegerArgumentException
      *
      * @return array the $number and the $length
      */

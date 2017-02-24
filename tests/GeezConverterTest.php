@@ -1,8 +1,8 @@
 <?php
 
-namespace Andegna\Geez\PHPUnit;
+namespace Geezify\PHPUnit;
 
-use Andegna\Geez\Converter\GeezConverter;
+use Geezify\Converter\GeezConverter;
 
 class GeezConverterTest extends TestCase
 {
@@ -15,7 +15,7 @@ class GeezConverterTest extends TestCase
      * @param $number
      * @param $geez_number
      *
-     * @throws \Andegna\Geez\Exception\NotAnIntegerArgumentException
+     * @throws \Geezify\Exception\NotAnIntegerArgumentException
      * @dataProvider geezNumberTestDataProvider
      */
     public function test_geez_converter($number, $geez_number)
@@ -28,9 +28,9 @@ class GeezConverterTest extends TestCase
     /**
      * @param $number
      *
-     * @throws \Andegna\Geez\Exception\NotAnIntegerArgumentException
+     * @throws \Geezify\Exception\NotAnIntegerArgumentException
      * @dataProvider invalidNumberDataProvider
-     * @expectedException \Andegna\Geez\Exception\NotAnIntegerArgumentException
+     * @expectedException \Geezify\Exception\NotAnIntegerArgumentException
      */
     public function test_invalid_number_throw_exception($number)
     {

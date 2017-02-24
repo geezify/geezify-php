@@ -1,6 +1,6 @@
 <?php
 
-namespace Andegna\Geez\Converter;
+namespace Geezify\Converter;
 
 /**
  * Converter class provide the base functionality

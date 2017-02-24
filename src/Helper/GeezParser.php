@@ -1,9 +1,9 @@
 <?php
 
-namespace Andegna\Geez\Helper;
+namespace Geezify\Helper;
 
-use Andegna\Geez\Converter\Converter;
-use Andegna\Geez\Exception\NotGeezArgumentException;
+use Geezify\Converter\Converter;
+use Geezify\Exception\NotGeezArgumentException;
 use SplQueue as Queue;
 
 /**
@@ -89,7 +89,7 @@ class GeezParser
      * @param $index integer
      * @param $block integer
      *
-     * @throws \Andegna\Geez\Exception\NotGeezArgumentException
+     * @throws \Geezify\Exception\NotGeezArgumentException
      */
     protected function parseCharacter($index, &$block)
     {
@@ -108,7 +108,7 @@ class GeezParser
      *
      * @param $index
      *
-     * @throws \Andegna\Geez\Exception\NotGeezArgumentException
+     * @throws \Geezify\Exception\NotGeezArgumentException
      *
      * @return int
      */

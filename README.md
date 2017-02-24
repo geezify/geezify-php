@@ -1,16 +1,16 @@
-Andegna Geezify  ![From Ethiopia](https://img.shields.io/badge/From-Ethiopia-brightgreen.svg)
-===============
+Geezify  ![From Ethiopia](https://img.shields.io/badge/From-Ethiopia-brightgreen.svg)
+=======
 
-[![Build Status](https://travis-ci.org/andegna/geezify.svg?branch=master)](https://travis-ci.org/andegna/geezify)
+[![Build Status](https://travis-ci.org/geezify/geezify-php.svg?branch=master)](https://travis-ci.org/geezify/geezify-php)
 [![StyleCI](https://styleci.io/repos/68031629/shield?branch=master)](https://styleci.io/repos/68031629)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/andegna/geezify/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/andegna/geezify/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/andegna/geezify/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/andegna/geezify/?branch=master)
-[![Total Downloads](https://poser.pugx.org/andegna/geezify/d/total.svg)](https://packagist.org/packages/andegna/geezify)
-[![Latest Stable Version](https://poser.pugx.org/andegna/geezify/v/stable.svg)](https://packagist.org/packages/andegna/geezify)
-[![Latest Unstable Version](https://poser.pugx.org/andegna/geezify/v/unstable.svg)](https://packagist.org/packages/andegna/geezify)
-[![License](https://poser.pugx.org/andegna/geezify/license.svg)](https://packagist.org/packages/andegna/geezify)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/geezify/geezify-php/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/geezify/geezify-php/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/geezify/geezify-php/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/geezify/geezify-php/?branch=master)
+[![Total Downloads](https://poser.pugx.org/geezify/geezify-php/d/total.svg)](https://packagist.org/packages/geezify/geezify-php)
+[![Latest Stable Version](https://poser.pugx.org/geezify/geezify-php/v/stable.svg)](https://packagist.org/packages/geezify/geezify-php)
+[![Latest Unstable Version](https://poser.pugx.org/geezify/geezify-php/v/unstable.svg)](https://packagist.org/packages/geezify/geezify-php)
+[![License](https://poser.pugx.org/geezify/geezify-php/license.svg)](https://packagist.org/packages/geezify/geezify-php)
 
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/a3519698-fee9-494c-adbb-c5c2f8abc422/big.png)](https://insight.sensiolabs.com/projects/a3519698-fee9-494c-adbb-c5c2f8abc422)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/10402788-4581-471f-a963-e1b775ff7630/big.png)](https://insight.sensiolabs.com/projects/10402788-4581-471f-a963-e1b775ff7630)
 
 This package is a library to convert ascii number like '**3456**' to geez number '**፴፬፻፶፮**' and vise versa.
 
@@ -25,7 +25,7 @@ Prerequisites
 Installation
 ------------
 ```sh
-composer require andegna/geezify
+composer require geezify/geezify-php
 ```
 
  > If you never used `composer` before, please check out 
@@ -39,7 +39,7 @@ Usage
 
 require 'vendor/autoload.php';
 
-use Andegna\Geez\Geezify;
+use Geezify\Geezify;
 
 $geez = Geezify::create();
 

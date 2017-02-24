@@ -1,10 +1,10 @@
 <?php
 
-namespace Andegna\Geez\Converter;
+namespace Geezify\Converter;
 
-use Andegna\Geez\Exception\NotGeezArgumentException;
-use Andegna\Geez\Helper\GeezCalculator;
-use Andegna\Geez\Helper\GeezParser;
+use Geezify\Exception\NotGeezArgumentException;
+use Geezify\Helper\GeezCalculator;
+use Geezify\Helper\GeezParser;
 use SplQueue as Queue;
 
 /**

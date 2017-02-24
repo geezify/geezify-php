@@ -1,8 +1,8 @@
 <?php
 
-namespace Andegna\Geez\PHPUnit;
+namespace Geezify\PHPUnit;
 
-use Andegna\Geez\Converter\AsciiConverter;
+use Geezify\Converter\AsciiConverter;
 
 class AsciiConverterTest extends TestCase
 {
@@ -13,7 +13,7 @@ class AsciiConverterTest extends TestCase
      * @param $ascii
      * @param $geez
      *
-     * @throws \Andegna\Geez\Exception\NotGeezArgumentException
+     * @throws \Geezify\Exception\NotGeezArgumentException
      * @dataProvider geezNumberTestDataProvider
      */
     public function test_ascii_converter($ascii, $geez)
@@ -26,9 +26,9 @@ class AsciiConverterTest extends TestCase
     /**
      * @param $value
      *
-     * @throws \Andegna\Geez\Exception\NotGeezArgumentException
+     * @throws \Geezify\Exception\NotGeezArgumentException
      * @dataProvider invalidNumberDataProvider
-     * @expectedException Andegna\Geez\Exception\NotGeezArgumentException
+     * @expectedException Geezify\Exception\NotGeezArgumentException
      */
     public function test_invalid_number_throw_exception($value)
     {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Andegna\Geez\Helper;
+namespace Geezify\Helper;
 
-use Andegna\Geez\Converter\Converter;
+use Geezify\Converter\Converter;
 use SplQueue as Queue;
 
 /**

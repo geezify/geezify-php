@@ -1,6 +1,6 @@
 <?php
 
-namespace Andegna\Geez\PHPUnit;
+namespace Geezify\PHPUnit;
 
 class TestCase extends \PHPUnit\Framework\TestCase
 {

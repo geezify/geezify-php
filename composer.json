@@ -1,7 +1,7 @@
 {
-	"name": "andegna/geezify",
+	"name": "geezify/geezify-php",
 	"description": "A library to convert ascii number like '3456' to geez number '፴፬፻፶፮' and vise versa.",
-	"keywords": [ "ethiopian", "geez-number", "geez"],
+	"keywords": [ "ethiopian", "geez", "geezify"],
 	"minimum-stability": "stable",
 	"license": "MIT",
 	"authors": [
@@ -18,13 +18,19 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Andegna\\Geez\\": "src/"
+			"Geezify\\": "src/"
 		}
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"Andegna\\Geez\\PHPUnit\\": "tests/"
+			"Geezify\\PHPUnit\\": "tests/"
 		}
+	},
+	"replace": {
+		"andegna/geezify": "self.version"
+	},
+	"provide": {
+		"andegna/geezify": "self.version"
 	},
 	"extra": {
 		"branch-alias": {
